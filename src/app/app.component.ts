@@ -31,10 +31,29 @@ export class AppComponent implements OnInit {
     // this.signupForm.statusChanges.subscribe((status) => {
     //   console.log(status);
     // })
+
+    // for set we have to define all the fields
+    // this.signupForm.setValue({
+    //   userData: {
+    //     username: 'Ashii',
+    //     email: 'barthwal@gmail.com'
+    //   },
+    //   gender: 'female',
+    //   hobbies: []
+    // });
+
+    // for patchValue we can define a specific value
+    this.signupForm.patchValue({
+      userData: {
+        username: 'Nikita'
+      }
+    });
   }
 
   onSubmit() {
     console.log(this.signupForm);
+    // for reset we can define specific value for resetting
+    this.signupForm.reset();
   }
 
   onAddHobby() {
